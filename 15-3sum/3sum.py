@@ -12,9 +12,9 @@ class Solution:
                 elif sum_<0:
                     left+=1
                 else:
-                    triplet= [nums[i],nums[left],nums[right]]
-                    triplet.sort()
-                    output.add(tuple(triplet))
+                    triplet= (nums[i],nums[left],nums[right])
+                    a=sorted(triplet)
+                    output.add(tuple(a))
                     left+=1
                     right-=1           
         return list(output)           
