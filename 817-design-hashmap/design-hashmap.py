@@ -16,12 +16,14 @@ class MyHashMap:
                 return self.arr[i][1]
         return -1      
     def remove(self, key: int) -> None:
+        remove_index=-1
         for i in range(len(self.arr)):
             if self.arr[i][0]==key:
+                remove_index=i
+        if remove_index!=-1:
+            self.arr.pop(remove_index)
 
-                self.arr.pop(i)
-                break
-        
+                       
 # Your MyHashMap object will be instantiated and called as such:
 # obj = MyHashMap()
 # obj.put(key,value)
