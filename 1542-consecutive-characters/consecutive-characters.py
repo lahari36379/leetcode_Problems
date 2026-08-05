@@ -6,9 +6,8 @@ class Solution:
             if s[i]==s[i+1]:
                 count+=1
             else:
-                if count>max_count:
+                if max_count<count:
                     max_count=count
                 count=1
-        return max(max_count,count)            
-
+        return max(max_count,count)                
         
