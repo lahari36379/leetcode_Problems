@@ -1,12 +1,9 @@
 class Solution:
     def maxVowels(self, s: str, k: int) -> int:
-        #vowel_count=0
         max_vowel_count=0
         left=0
-        lst=[]
         c=0
-        for right in range(len(list((s)))):
-            lst.append(s[right])
+        for right in range(len(s)):
             if s[right] in "aeiou":
                 c+=1
             if right>=k-1:
