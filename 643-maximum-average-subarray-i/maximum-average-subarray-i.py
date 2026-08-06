@@ -1,17 +1,15 @@
 class Solution:
     def findMaxAverage(self, nums: List[int], k: int) -> float:
-        #sliding window(fixed-length sliding window)
-        maxaverage=-10000000
+        max_average=-1000000
         left=0
-        currentsum=0
+        current_sum=0
         for right in range(len(nums)):
-            currentsum+=nums[right]
+            current_sum+=nums[right]
             if right>=k-1:
-                avg=currentsum/k
-                maxaverage=max(avg,maxaverage)
-                #subtracting the value on left(window size is exceed k)
-                currentsum-=nums[left]
+                avg=current_sum/k
+                if avg>max_average:
+                    max_average=avg
+                current_sum-=nums[left]
                 left+=1
-        return maxaverage        
-
+        return max_average            
         
