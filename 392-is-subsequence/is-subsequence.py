@@ -2,8 +2,7 @@ class Solution:
     def isSubsequence(self, s: str, t: str) -> bool:
         i=0
         j=0
-        while i<len(t) and j<len(s):
-            
+        while  j<len(s) and i<len(t):
                 if t[i]==s[j]:
                     i+=1
                     j+=1
