@@ -1,18 +1,27 @@
+def fun(i):
+    if (i>="a" and i<='z') or (i>='A' and i<='Z'):
+        return True
+    else:
+        return False    
 class Solution:
     def reverseOnlyLetters(self, s: str) -> str:
-        s=list(s)
         left=0
         right=len(s)-1
+        s=list(s)
         while left<right:
-            if ((s[left]>='A' and s[left]<='Z') or (s[left]>='a' and s[left]<='z')) and((s[right]>='A' and s[right]<='Z') or (s[right]>='a' and s[right]<='z'))  :
+            if fun(s[left]) and fun(s[right]):
                 s[left],s[right]=s[right],s[left]
                 left+=1
                 right-=1
-            elif (s[left]>='A' and s[left]<='Z') or (s[left]>='a' and s[left]<='z'):
+            elif fun(s[left]):
                 right-=1
-            elif  (s[right]>='A' and s[right]<='Z') or (s[right]>='a' and s[right]<='z'):
+            elif fun(s[right]):
                 left+=1
             else:
                 left+=1
                 right-=1
-        return ''.join(s)              
+        return "".join(s)                    
+        
+
+         
+        
