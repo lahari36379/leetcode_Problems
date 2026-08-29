@@ -9,5 +9,6 @@ class Solution:
                 if count>max_count:
                     max_count=count
                 count=0
-        return max(max_count,count)              
+        return max(count,max_count)            
+
         
