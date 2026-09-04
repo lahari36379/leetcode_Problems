@@ -3,8 +3,10 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        left=0
-        for right in range(len(nums)):
-            if nums[right]!=0:
-                nums[left],nums[right]=nums[right],nums[left]
-                left+=1  
+        lst=[]
+        for i in nums:
+            if i !=0:
+                lst.append(i)
+        zeroes=len(nums)-len(lst)
+        lst+=[0]*zeroes
+        nums[:]=lst        
