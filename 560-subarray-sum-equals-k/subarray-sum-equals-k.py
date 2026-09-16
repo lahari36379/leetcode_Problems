@@ -16,5 +16,6 @@ class Solution:
             seen[csum]=seen.get(csum,0)+1
         return subcnt        
         
+        
 
         
