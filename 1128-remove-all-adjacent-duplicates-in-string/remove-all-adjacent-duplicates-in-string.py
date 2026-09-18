@@ -9,6 +9,6 @@ class Solution:
                     st.pop()
                 else:
                     st.append(i)
-        return "".join(st)                     
+        return "".join(st)                    
 
         
