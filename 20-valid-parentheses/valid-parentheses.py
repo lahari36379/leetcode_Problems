@@ -7,6 +7,7 @@ class Solution:
             else:
                 if not st:
                     return False
+                    break
                 else:
                     if i==")" and st[-1]=="(":
                         st.pop()
@@ -15,7 +16,8 @@ class Solution:
                     elif i=="}" and st[-1]=="{":
                         st.pop()
                     else:
-                        return False    
+                        return False 
+                        break  
         if not st:
             return True
         else:
